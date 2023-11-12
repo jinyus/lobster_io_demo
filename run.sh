@@ -15,4 +15,7 @@ cp -T . "$lobster_git_dir/demo_temp" -r --force &&
     cd dev &&
     cmake -DCMAKE_BUILD_TYPE=Release -DLOBSTER_ENGINE=OFF -DLOBSTER_TOCPP=ON && make -j8 &&
     cd "$current_directory" &&
-    compiled_lobster
+    echo -e "\nLobster (C++)" &&
+    compiled_lobster &&
+    echo -e "\nLobster (JIT)" &&
+    lobster demo.lobster
